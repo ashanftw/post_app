@@ -18,16 +18,16 @@ class NetworkService {
       dynamic response;
       switch (type) {
         case HttpMethod.get:
-          response = await http.get(url, headers: headers);
+          response = await client.get(url, headers: headers);
           break;
         case HttpMethod.post:
-          response = await http.post(url, body: body, headers: headers);
+          response = await client.post(url, body: body, headers: headers);
           break;
         case HttpMethod.put:
-          response = await http.put(url, body: body, headers: headers);
+          response = await client.put(url, body: body, headers: headers);
           break;
         case HttpMethod.delete:
-          response = await http.delete(url, body: body, headers: headers);
+          response = await client.delete(url, body: body, headers: headers);
           break;
         default:
       }
